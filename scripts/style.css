@@ -116,89 +116,148 @@ header h1{
  .first-col{
    flex-basis: 35%;
  }
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  border: 2px solidblack;
+  border-radius: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style:preserve-3d;
+ 
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+/* Style the front side */
+.flip-card-front {
+  background-image: linear-gradient(to bottom right,
+  rgba(0, 3, 0, 0.205),
+  rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: dodgerblue;
+  color: white;
+ 
+  border-radius: 10px;
+ 
+}
+.flip-card-front:hover {
+  transform-style: preserve-3d;
+  
+  background-image: url('../images/picture.jpg');
+}
+
+/* Style the back side (fallback if image is missing) */
+.flip-card-back {
+  background: linear-gradient(to top right,
+  rgba(95, 110, 9, 0.55),
+  rgba(65, 88, 12, 0.44)); 
+  transform: rotateY(180deg);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
  .second-col{
    flex-basis: 60%;
  }
+
+/* tabs */
+
+.tab-titles{
+  display: flex;
+  font-size: 30;
+  font-weight: bold;
  
- .about-info h2{
-   font-size: 30px;
-   padding-top: 5px;
- }
-
- .about-info p{
-   font-size: 20px;
-   padding-top: 5px;
- }
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-
-.flip-card {
-   background-color: black;
-   width: 100%;
-   height: 100vh;
-   border: 2px solidblack;
-   border-radius: 10px;
-   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-   
+ 
 }
- 
- /* This container is needed to position the front and back side */
- .flip-card-inner {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   text-align: center;
-   transition: transform 0.8s;
-   transform-style:preserve-3d;
-  
- }
- 
- /* Do an horizontal flip when you move the mouse over the flip box container */
- .flip-card:hover .flip-card-inner {
-   transform: rotateY(180deg);
- }
- 
- /* Position the front and back side */
- .flip-card-front, .flip-card-back {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   -webkit-backface-visibility: hidden; /* Safari */
-   backface-visibility: hidden;
- }
- /* Style the front side */
- .flip-card-front {
-   background-image: linear-gradient(to bottom right,
-   rgba(0, 3, 0, 0.205),
-   rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
-   background-position: center;
-   background-size: cover;
-   background-color: dodgerblue;
-   color: white;
-  
-   border-radius: 10px;
-  
- }
- .flip-card-front:hover {
-   transform-style: preserve-3d;
-   
-   background-image: url('../images/picture.jpg');
- }
+.tab-links{
+  position: relative;
+  font-size: 20px;
+  padding-right: 25px;
+  color: rgb(65, 66, 18);
+  cursor: pointer;
+}
 
- /* Style the back side (fallback if image is missing) */
- .flip-card-back {
-   background: linear-gradient(to top right,
-   rgba(95, 110, 9, 0.55),
-   rgba(65, 88, 12, 0.44)); 
-   transform: rotateY(180deg);
-   color: white;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
- .about-info{
-   padding-top: 20%;
- }
- .about-info h1{
-   font-size: 55px;
- }
+.tab-links::after{
+  content: '';
+  width: 0;
+  background: rgb(65, 66, 18);
+  bottom: -8px;
+  position: absolute;
+  height: 5px;
+  left: 0;
+  transition: 0.5s;
+
+
+}
+.tab-links.active-link::after{
+  width: 50%;
+}
+
+
+
+
+form input{
+  height: 40px;
+  width: 500px;
+}
+
+form textarea{
+  height: 80px;
+  width: 500px;
+}
+form button{
+  width: 80px;
+  height: 35px;
+  background-color: blue;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
