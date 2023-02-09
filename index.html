@@ -5,103 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
     <link rel="stylesheet" href="scripts/style.css">
+   <!-- <script src="scripts/main.js"></script> -->
+
+   <style>
+    .chip {
+      display: inline-block;
+      padding: 0 25px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 50px;
+      border-radius: 25px;
+      background-color: blue;
+    }
+    
+    .chip img {
+      float: left;
+      margin: 0 10px 0 -25px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    </style>
  
 </head>
 <body> 
       <div id="header">
         <div class="container">
           <nav>
-            <h1><span>Dev</span>.Akhwale</h1>
+            <img src="images/logo.png" style="height:30;width:125px">
             <ul>  
-              <li><a href=" ">Home</a></li>
-              <li><a href=" ">About</a></li>
-              <li><a href=" ">Portfolio</a></li>
-              <li><a href=" ">Contact</a></li>
+              <li><a href="#" class= "active-link">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="# ">Contact</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="header-text">
           <div class="container">
-          <h3>Hello,</h3>
-          <h2>I'm <span>Edwin Akhwale,</span> a developer</h2>
-          <h3>from Nairobi,<span> Kenya.</span> </h3>
-         <h4>| PHP | Python | Dart | Java | JavaScript | SQL | NoSQL |</h4>
-        </div>
+            <div class="salutation">
+              In Need of 
+              <div class="slider">   
+                <div>an Online-Store?</div>
+                <div>a Web App?</div>
+                <div>a Website?</div>  
+              </div>
+            </div>
+          <div class="content">
+            <h2>I'm <span>Edwin Akhwale,</span> a developer</h2>
+            <h2>from<span> Nairobi, </span>Kenya. </h2>
+            <h4>Quick! Lets get you started.</h4>
+            <button type="button">Send me an email</button>
+          </div>
         </div>
       </div>
 
+      </div>
+
+
+<!-- About Section -->
 
       <div id="about">
         <div class="container">
-          <header>
-            <h1>Learn More About Me</h1>
-          </header>
+          <nav>
+            <header>
+              <h1>Brief 'About'</h1>
+            </header>
+            <img src="images/logo.png" style="height:30;width:125px">
+          </nav>
+         
+         
           <div class="row">
             <div class="first-col">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                  </div>
-                  <div class="flip-card-back">
-                  </div>
-                </div>
-              </div>
+              <div class="card">
+              </div>   
             </div>
 
             <div class="second-col">
-             
-                <div class="tab-titles">
-                  <p class ="tab-links active-link">Summary</p>
-                  <p class="tab-links" >Experience</p>
-                  <p class="tab-links" >Education</p>
-                  <p class="tab-links" >Skills</p> 
+
+              <!-- Tab-heading and links -->
+
+              <div class="tab-heading">
+                <p class="tab-links active-link" onclick="navigate('about')" >Profile</p>
+                <p class="tab-links" onclick="navigate('education')" >Education</p>
+                <p class="tab-links" onclick="navigate('experience')" >Experience</p>
+                <p class="tab-links" onclick="navigate('interests')" >Interests</p>
               </div>
-                <h1>"</h1>
+              
+              <!-- Tab content -->
+              <div id="profile" class="tab-contents active-tab">
                 <h2>Hello,</h2>
-                    <p>My name is Edwin once again, a graduate from the Technical University of Kenya. I love coding.
-                      I am a full-stack developer. I develop both web and mobile applications. I am passionate about using my skills
-                       to provide real life solutions.If I was to choose a carrer outside the tech space, 
-                       I would train on how best to serve you!</p>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>My name is Edwin Akhwale, a graduate from the Technical University of Kenya.
+                  I am a holder of a bachelor's degree in Information Science. During my final year of studies,
+                  I specialized in Informatics. My love for tech has been significant since my childhood.
+                  I like to get crafty and see things working. As a result of the same, I am a huge enthusiast 
+                  of coding. Through my journey of self discovery I have written codes in more than 10 programming languages.
+                  My best programming language is JavaScript.
+                  I also have great experience working with other programming languages on both small and huge projects.</p>
+                
+                  <p>My name is Edwin Akhwale, a graduate from the Technical University of Kenya.
+                    I am a holder of a bachelor's degree in Information Science. During my final year of studies,
+                    I specialized in Informatics. My love for tech has been significant since my childhood.
+                    I like to get crafty and see things working. As a result of the same, I am a huge enthusiast 
+                    of coding. Through my journey of self discovery I have written codes in more than 10 programming languages.
+                    My best programming language is JavaScript.
+                    I also have great experience working with other programming languages on both small and huge projects.</p>
+                   
+                <h3>Edwin Akhwale</h3>
+              </div>
+              
+              <div id="education" class="tab-contents">
+               <ul>
+                <li><span>University</span> <br>Technical University of Kenya</li>
+                <li><span>HighSchool</span><br> St. Peters' Boys' High School Mumias</li>
+                <li><span>Primart</span> <br>Unity Primary School</li>
+               
+               </ul>
+              </div>
+              
+              <div id="experience" class="tab-contents">
+                <ul>
+                  <li><span>Web Development</span> <br>Technical University of Kenya</li>
+                  <li><span>Mobile App Development</span><br> St. Peters' Boys' High School Mumias</li>
+                  <li><span>Networking</span> <br>Unity Primary School</li>
+                 
+                 </ul>
+              </div>
+
+              <div id="interests" class="tab-contents">
+                <ul>
+                  <li><span>Rugby</span> <br>Technical University of Kenya</li>
+                  <li><span>Technology</span><br> St. Peters' Boys' High School Mumias</li>
+                  <li><span>Politics</span> <br>Unity Primary School</li>
+                 
+                 </ul>
+                </div>
             </div>
-
-           
-
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-
-
-
-            </div>
-          </div>
-         
+          </div>  
         </div>
       </div>
 
 
-      <div id="myServices">
+      <div id="portfolio">
+        
         <div class="container">
-          <h1>Web Development</h1>
-          <h1>Mobile Development</h1>
-          <h1>Tech Support</h1>
+          
+          <nav style="background-color: wheat;">
+            <header>
+              <h1 style="color:aliceblue"> Portfolio </h1>
+            </header>
+            <img src="images/logo.png" style="height:30;width:125px">
+          </nav>
+          
+            <h3>Technologies used</h3>
+
+            <div class="row">
+              
+                Front-end<br>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  HTML
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  CSS
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  JavaScript
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  Tailwind
+                </div>
+
+              
+
+
+              
+                Back-end<br>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  Python
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  PHP
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  JavaScript
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  Java
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  Dart
+                </div>
+                <div class="chip">
+                  <img src="images/background.png" alt="Person" width="96" height="96">
+                  Java
+                </div>
+
+             
+
+            </div>
+          </div>
+          
+
+
+
+<div class="row">
+  <h1>How I would Rate myself
+  </h1>
+</div>
+
+<div class="row">
+
+  <div class="col">
+  <div class="chip">
+    <img src="images/background.png" alt="Person" width="96" height="96">
+    John Doe
+  </div>
+  <div class="chip">
+    <img src="images/background.png" alt="Person" width="96" height="96">
+    John Doe
+  </div>
+  <div class="chip">
+    <img src="images/background.png" alt="Person" width="96" height="96">
+    John Doe
+  </div>
+  <div class="chip">
+    <img src="images/background.png" alt="Person" width="96" height="96">
+    John Doe
+  </div>
+</div>
+</div>
+          <div class="row">
+            <div class="card">
+              <img src = "images/background.png" style="height:200px; width :100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src = "images/background.png" style="height:300px; width :100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src = "images/background.png" style="height:200px; width :100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+              </div>
+            </div>
+
+
+            
+
+            
+             
+          </div>
 
         </div>
         </div>
@@ -139,7 +312,38 @@
          </div>
         </div>
 
+        <script>
+          var tablinks = document.getElementsByClassName('tab-links');
+          var tabcontents = document.getElementsByClassName('tab-contents');
+
+
+
+function navigate(tabname){
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+
+  }
+
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+
+}
+        </script>
 
   
 </body>
 </html>
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    </div>
+    <div class="flip-card-back">
+    </div>
+  </div>
+</div>
