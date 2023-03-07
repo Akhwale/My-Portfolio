@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Porfolio</title>
     <link rel="stylesheet" href="scripts/style.css">
    <!-- <script src="scripts/main.js"></script> -->
@@ -24,8 +25,6 @@
           </nav>
         </div>
 
-
-        <a href="#" >our link</a>
 
         <div class="header-text">
           <div class="container">
@@ -132,94 +131,123 @@
       </div>
 
 
+<!-- Portfolio Section -->
+
       <div id="portfolio">
-        
-        <div class="container">
-          
+        <div class="container"> 
           <nav>
             <header>
               <h1 style="color: rgb(65, 66, 18);"> Portfolio </h1>
             </header>
             <img src="images/logo.png" style="height:30;width:125px">
-          </nav>
+          </nav><br>
         
-            <div class="row">
-              <div class="lang-col">
-                <div style="background-color: transparent; border: 2px solid white;">
-                  <h3>Technology Used</h3>
-                </div>
-               
-                
-                <div class="card tech">
-                  <h5>Front End Design</h5>
-                  <div class="chip">
-                    <img src="images/html.jfif" alt="Person" width="96" height="96">
-                    HTML
-                  </div>
-                  <div class="chip">
-                    <img src="images/css.png" alt="Person" width="96" height="96">
-                    CSS
-                  </div>
-                  <div class="chip">
-                    <img src="images/js.png" alt="Person" width="96" height="96">
-                    JavaScript
-                  </div>
-                  <div class="chip">
-                    <img src="images/tailwind.png" alt="Person" width="96" height="96">
-                    Tailwind
-                  </div>
-  
-                  <br>
-                  Back-end<br>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    Python
-                  </div>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    PHP
-                  </div>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    JavaScript
-                  </div>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    Java
-                  </div>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    Dart
-                  </div>
-                  <div class="chip">
-                    <img src="images/background.png" alt="Person" width="96" height="96">
-                    Java
-                  </div>
+        <h2 style="text-align: center;">Front-end Proficiency Levels</h2>
+        <div class="row">
+          <img id="rating" src="images/html.jpg">
+          <img id="rating" src="images/css.JPG" >
+          <img id="rating" src="images/bootsrap.JPG" >
+          <img id="rating" src="images/tailwind.JPG">
+        </div>
+        <br>
 
-                </div>
-
-              </div>
-
-              <div class="prof-col">
-                <h3>Profeciency Level</h3>
-<div class="card tech">
-
-
-</div>
-              </div>
-              
-              
-              
-
-
-              
-              
-
-             
-
-            </div>
-          </div>
+        <h2 style="text-align: center;">Back-end end Proficiency Levels</h2>
+        <div class="row">
+          <img id="rating" src="images/python.JPG">
+          <img id="rating" src="images/java.JPG" >
+          <img id="rating" src="images/javascript.JPG" >
+          <img id="rating" src="images/php.JPG">
+          <img id="rating" src="images/dart.JPG">
+        </div>
+        </div>
+      </div>
           
+<!-- Experience Section     -->
+
+
+      <div id="expereince">
+        <div class="container">
+          <nav>
+            <header>
+              <h1 style="color: rgb(65, 66, 18);"> Experience </h1>
+            </header>
+            <img src="images/logo.png" style="height:30;width:125px">
+          </nav><br>
+
+
+          <div class="projects">
+
+            <!-- Tab-heading and links -->
+    
+            <div class="tab-heading">
+              <p class="tab-links active-link" onclick="navigate('web-development')" >Web Development</p>
+              <p class="tab-links" onclick="navigate('mobile-development')" >Mobile Development</p>
+              <p class="tab-links" onclick="navigate('other-interests')" >Other interests</p>
+             
+            </div>
+            
+            <!-- Tab content -->
+            <div id="web-development" class="tab-contents active-tab">
+              <img id="rating" src="images/html.jpg">
+            </div>
+            
+            <div id="education" class="tab-contents">
+             <ul>
+              <li><span>University</span> <br>Technical University of Kenya</li>
+              <li><span>HighSchool</span><br> St. Peters' Boys' High School Mumias</li>
+              <li><span>Primart</span> <br>Unity Primary School</li>
+             
+             </ul>
+            </div>
+            
+            <div id="experience" class="tab-contents">
+              <ul>
+                <li><span>Web Development</span> <br>Technical University of Kenya</li>
+                <li><span>Mobile App Development</span><br> St. Peters' Boys' High School Mumias</li>
+                <li><span>Networking</span> <br>Unity Primary School</li>
+               
+               </ul>
+            </div>
+    
+            <div id="interests" class="tab-contents">
+              <ul>
+                <li><span>Rugby</span> <br>Technical University of Kenya</li>
+                <li><span>Technology</span><br> St. Peters' Boys' High School Mumias</li>
+                <li><span>Politics</span> <br>Unity Primary School</li>
+               
+               </ul>
+              </div>
+          </div>
+    
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,64 +276,67 @@
                 <p>Architect & Engineer</p>
               </div>
             </div>
-
-
-            
-
-            
-             
+   
           </div>
 
         </div>
         </div>
         
 
-      <div id="Porfolio">
-        <div class="container">
-          <h1>Work Experience</h1>
+      
 
-        </div>
-        </div>
-        
+<!-- Contact Information Section -->
+
         <div id="Contact">
           <div class="container">
-            <H1>Contact Me here</H1>
+            <div class="row">
+            <div class="con-col">
+              <h1>Contact Me here</h1>
             <form method="post">
-              <label for="frstMame">First Name:</label><br>
-              <input type="text" id="firstName" name="firstName"><br>
-              <label for="lastMame">Last Name:</label><br>
-              <input type="text" id="lastName" name="lastName"><br>
-              <label for="email">Your Email Address:</label><br>
-              <input type="text" id="email" name="email"><br>
-              <label for="message">Message:</label><br>
+              <label for="frstMame">First Name:</label><br><br>
+              <input type="text" id="firstName" name="firstName"><br><br>
+              <label for="lastMame">Last Name:</label><br><br>
+              <input type="text" id="lastName" name="lastName"><br><br>
+              <label for="email">Your Email Address:</label><br><br>
+              <input type="text" id="email" name="email"><br><br>
+              <label for="message">Message:</label><br><br>
               <textarea type="text" id="email" name="email"></textarea><br><br>
               <button type="submit">Submit</button>
             </form>
-            
-            
-          </div>
-          </div>
-          
-        <div id="footer">
-         <div class="container">
-          <div class="row">
-            <div class="col" style="flex-basis: 30%;">
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2>
             </div>
-            <div class="col" style="flex-basis: 30%;">
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2>
+            <div class="inf-col">
+              <table>
+                <tr>
+                  <td id="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
+                  <td>dev.akhwale@gmail.com</td>
+                </tr>
+                <tr>
+                  <td id="icon"><i class="fa fa-instagram" aria-hidden="true"></i></td>
+                  <td>instagram handle</td>
+                </tr>
+                <tr>
+                  <td id="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></td>
+                  <td>Linkedin</td>
+                </tr>        
+                <tr>
+                  <td id="icon"><i class="fa fa-twitter" aria-hidden="true"></i></td>
+                  <td>twitter handle</td>
+                </tr>
+                <tr>
+                  <td id="icon"><i class="fa fa-github" aria-hidden="true"></i></td>
+                  <td>github</td>
+                </tr>
+                <tr>
+                  <td id="icon"><i class="fa fa-facebook" aria-hidden="true"></i></td>
+                  <td>facebook</td>
+                </tr>
+              </table>
             </div>
-            <div class="col" style="flex-basis: 30%;">
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2>
-              <h2>Alaaaaaali</h2></div>
+          </div>    
           </div>
-         </div>
         </div>
+          
+  
 
 
         <div class="flip-card">
