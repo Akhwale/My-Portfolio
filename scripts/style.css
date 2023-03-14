@@ -2,23 +2,44 @@
     padding: 0;
     margin: 0;
 }
+/* Global */
+#title h1{
+    padding: 0;
+    color: rgb(65, 66, 18);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:35px;
+}
+#logo{
+    height:30;
+    width:125px;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 8px;
+}
 
+
+
+/* End of Global Styling */
+
+
+/* Landing Page */
 
 #header{
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background-image: linear-gradient(to top right,
     rgb(0, 3, 0),
     rgba(0, 136, 68, 0.15)), url('../images/background.png');
     background-size: cover;
     background-position: center;
 }
-
 .container{
     background-color: transparent;
     padding: 10px 70px;
 }
-
 nav{
     display: flex;
     align-items: center;
@@ -35,7 +56,7 @@ nav{
  nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 20;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     transition: 0.5s;
@@ -56,22 +77,26 @@ nav{
     background: rgb(6, 114, 6);
     left: 0;
     position: absolute;
-    bottom: -7;
+    bottom: -7px;
     transition: 0.5s;
     font-family: sans-serif;
  }
+
  nav ul li a:hover{
-    color: black;
-    
+    color: black;  
  }
+
  nav ul li a:hover::after{
     width: 100%;
     transition: 0.5;
     font-size: medium;
-  
  }
 
- .header-text{
+ nav .fa{
+    display: none;
+ }
+
+.header-text{
   text-align: center;
   margin-top: 7%;
   position: absolute;
@@ -91,13 +116,13 @@ nav{
   35%{margin-top: 0px;}
   65%{margin-top: 0px;}
   70%{margin-top: 200px;}
-  100%{margin-top: 200px;}
-  
+  100%{margin-top: 200px;} 
 }
-.salutation{
+
+.text{
   overflow: hidden;
   color:#ccc;
-  font-size: 45;
+  font-size: 45px;
   line-height: 100px;
   font-weight: bold;
   height: 100px;
@@ -113,12 +138,12 @@ nav{
     font-size: 45px;
     font-family:'Times New Roman', Times, serif
  }
+
  .header-text h2 span{
     color:white;
     font-weight: bolder;
     font-size: 65px;
     font-family:Georgia, 'Times New Roman', Times, serif;
-
  }
  
  .header-text h4{
@@ -126,11 +151,10 @@ nav{
     padding-top: 15px;
     font-weight: bold;
     font-size:20;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
  }
- .header-text button{
 
+ .header-text button{
   cursor: pointer;
   margin-top: 30px;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -143,302 +167,954 @@ nav{
   font-weight: bold;
   background-size: 200%;
   transition: background-position 0.5s;
+ } 
 
- }
  .header-text button:hover{
   background-position: right;
  }
 
-
  /* About Section */
 
- #about{
-   background-color: azure;
-   height:110vh;
- }
+#about{
+    background-color: azure;
+    height:100vh;
+}
 
+#image-section{
+    flex-basis: 35%;
+}
 
-header h1{
-   padding-bottom: 10px;
-   color: rgb(65, 66, 18);
-   font-family:Arial, Helvetica, sans-serif;
-   font-size:40px;
- }
- 
- .row{
-   padding: 10px;
-   display: flex;
-   justify-content:space-between;
-   flex-wrap: wrap;
- }
-
- .first-col{
-   flex-basis: 35%;
- }
- 
- .profile{
-  background-image: linear-gradient(to bottom right,
+#image{
+    background-image: linear-gradient(to bottom right,
   rgba(0, 3, 0, 0.205),
   rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
-  height: 90vh;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-color: dodgerblue;
-  color: white;
-  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 10px;
- }
- .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
-}
- 
- .second-col{
-  flex-basis: 60%;
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: dodgerblue;
+    color: white;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
 }
 
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+#details-section{
+    flex-basis: 60%;
+}
 
 .tab-heading{
- display: flex;
- overflow: hidden;
- background-color: transparent;
- font-family:Arial, Helvetica, sans-serif;
- 
+    display: flex;
+    overflow: hidden;
+    background-color: transparent;
+    font-family:Arial, Helvetica, sans-serif;
 }
-
+   
 .tab-links{
- cursor: pointer;
- font-size: 25px;
- color: rgb(65, 66, 18); 
- position: relative;
- padding-right: 20px;
- padding-top: 10;
- padding-bottom: 10;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(65, 66, 18); 
+    position: relative;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .tab-links::after{
- content: ''; 
- height: 5px;
- width: 0%;
- background: rgb(65, 66, 18);
- bottom: -2px;
- position: absolute;
- left: 0;
- transition: 0.5s;
+    content: ''; 
+    height: 5px;
+    width: 0%;
+    background: rgb(65, 66, 18);
+    bottom: -2px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
 }
 
 .tab-links.active-link::after{
- width:50%;
+    width:85%;
 }
-
-
-.tab-contents{
- padding-top: 30px;
-}
-
-.tab-contents h2{
-  font-size: 40px;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-.tab-contents p{
- padding-top: 20px;
- font-family:Arial, Helvetica, sans-serif;
- text-align:justify;
-}
-.tab-contents h3{
-  padding-top: 20px;
-  font-family:Arial, Helvetica, sans-serif;
-  text-align:right;
-  padding-bottom: 30px;
-  
- }
 
 .tab-contents {
- display: none;
-
+    display: none;
 } 
 
 .tab-contents.active-tab{
- display: block;
+   display: block;
 }
 
+#salutation{
+    padding-top: 30px;
+    font-size: 28px;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
- 
- 
- 
- 
- 
- /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+#font-1{
+    padding-top: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
 
+#signature{
+    padding-top: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
 
+#content-heading{
+    background: rgb(65, 66, 18); 
+    width: auto;
+    color: whitesmoke;
+    margin-top: 30px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+#font-2{
+    padding-top: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:justify;
+    font-weight: bold;
+}
+
+#wrapper{
+    margin-top:30px;
+}
+
+#interest-list{
+    padding-top: 30px;
+    list-style-type:none;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Expertise Section */
+
+#expertise{
+    width: 100%;
+    height: 100vh;
+    background-color:whitesmoke;
+}
+
+#skills{
+    flex-basis: 48%;
+}
+
+#skills-heading{
+    background: rgb(65, 66, 18); 
+    width: auto;
+    color: whitesmoke;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pie-rating{
+    border-radius: 50%;
+    height: 120px;
+}
+
+#back-end-1{
+    justify-content: space-around;
+}
+
+#barchart{
+    flex-basis: 48%;
+}
+
+#myPlot{
+    margin-top: 50px;
+    width:100%;
+}
+
+/* Experience Section */
+
+#experience{
+    height: 100vh;
+    width:100%;
+    background-color: azure;
+}
+
+.mySlides {
+    display: none;
+    height:60vh;
+    width: 100%;  
+}
+
+.mySlides img{
+    height: 60vh;
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+   
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 10px ;
+  margin-top: -240px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+    right: 140px;
+    border-radius: 3px 0 0 3px;
+}
+   
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption-container {
+    margin-top: -40px;
+    height:40px;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+}
+
+.caption-container p{
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+#thumbnail{
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#thumbnail:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.column {
+    padding:0;
+    float: left;
+    width: 18%;
+    height: 9%;
+}
+  
+.demo {
+    opacity: 0.85;
+    width: 100%;
+    height: 120px;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+  
+  /* web development gallery */
+
+#gallery{
+    flex-basis: 65%;
+    height: 80vh;
+}
+
+#side-section{
+    flex-basis: 25%;
+    border-bottom: 5px solid  dodgerblue;;
+}
+  
+#image-container {
+      display:flex;
+      width: 850px;
+      height: 80vh;
+      overflow-x: scroll;
+}
 
 .flip-card {
-  background-color: black;
-  width: 100%;
-  height: 80vh;
-  border: 2px solidblack;
-  border-radius: 10px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  
+    margin: 40px;
+    background-color: transparent;
+    width: 200px;
+    height: 65vh;
+    border-radius: 10px;
+    perspective: 1000px;  
 }
-
-/* This container is needed to position the front and back side */
+  
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style:preserve-3d;
- 
+    position: relative;
+    width: 200px;
+    height: 65vh;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style:preserve-3d;   
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-/* Style the front side */
-.flip-card-front {
-  background-image: linear-gradient(to bottom right,
-  rgba(0, 3, 0, 0.205),
-  rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
-  background-position: center;
-  background-size: cover;
-  background-color: dodgerblue;
-  color: white;
- 
-  border-radius: 10px;
- 
-}
-.flip-card-front:hover {
-  transform-style: preserve-3d;
   
-  background-image: url('../images/picture.jpg');
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-/* Style the back side (fallback if image is missing) */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 200px;
+    height: 65vh;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: dodgerblue;
+    color: white;   
+    border-radius: 10px;
+}  
+ 
+.flip-card-front:hover {
+    transform-style: preserve-3d;
+    background-image: url('../images/picture.jpg');
+}
+  
 .flip-card-back {
-  background: linear-gradient(to top right,
-  rgba(95, 110, 9, 0.55),
-  rgba(65, 88, 12, 0.44)); 
-  transform: rotateY(180deg);
+    background:rgb(65, 66, 18);
+    opacity: 0.9;
+    transform: rotateY(180deg);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#flip-back{
+    margin-top: 60%;
+    font-size: 12px;
+}
+
+#mpesa{
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/mpesa1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: dodgerblue;
+    color: white;
+   
+    border-radius: 10px;
+  }
+  #mpesa2{
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/mpesa4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: dodgerblue;
+    color: white;
+   
+    border-radius: 10px;
+  }
+  #gplug{
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/gplug1.jpg');
+    background-position: center;
+    background-size:contain;
+    background-color: dodgerblue;
+    color: white;
+   
+    border-radius: 10px;
+  }
+  #gplug2{
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/gplug2.jpg');
+    background-position: center;
+    background-size:contain;
+    background-color: dodgerblue;
+    color: white;
+   
+    border-radius: 10px;
+  }
+  #gplug3{
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/gplug3.jpg');
+    background-position: center;
+    background-size:contain;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+  }
+ 
+  #default-btn{
+  cursor: pointer;
+  margin-top: 30px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding: 5px 5px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid green;
+  background:linear-gradient(to right, transparent 50%, green 50%);
   color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+  font-weight: bold;
+  background-size: 200%;
+  transition: background-position 0.5s;
+ } 
 
+ #default-btn:hover{
+  background-position: right;
+ }
  
-
-
-
-
- 
-
-
-
-
-
-/* Portfolio Section */
-
-#portfolio{
-  width: 100%;
-  height: 100vh;
-  background-color:whitesmoke;
+#video-header{
+    background-color: rgb(116, 207, 230);
+    width: auto;
+    padding: 10px;
+    color:white;
 }
 
-#portfolio h2{
-  background-color: rgb(65, 66, 18);
-  color: whitesmoke;
-  border-radius: 10px;
-  padding: 10px 8px;
-  text-align: center; 
-  margin-left: 35%;
-  margin-right: 35%;
-  font-size: 20px;
+#video{
+    margin-top: 20px;
+    width:auto;
 }
-#rating{
-  border-radius: 50%;
-  height: 180px;
+   
+#flutter-icon{
+    height: 150px;
+   margin-left: 20%;
+   margin-right: 20%;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 8px solid rgb(116, 207, 230);
+    padding: 10px;
 }
+  
+/* Contact Information */
+
+#contact{
+    background-color: rgba(1, 1, 7, 0.966);
+    width: 100%;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+#form-col{
+    flex-basis: 48%; 
+}
+
+#social-links{
+    flex-basis: 48%;
+    text-align: center;  
+}
+
+#contact h1{
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: burlywood;
+}
+  
+form input{
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+  
+form textarea{
+    height: 80px;
+    width: 500px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+form button{
+    cursor: pointer;
+    width: 80px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+table{
+    cursor: pointer;
+    padding-top: 35%;
+    color: aliceblue;
+    padding-left: 20%;
+}
+  
+table td{
+    height: 40px;
+    padding-left: 30px;
+}
+
+#icon{
+    color: burlywood;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width: 600px){
+    *{
+        padding: 0;
+        margin:0;
+    }
+    /* Global */
+    #title h1{
+    padding: 0;
+    color: rgb(65, 66, 18);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:24px;
+    }
+    #logo{
+    height:28px;
+    width:100px;
+    }
+    .row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 8px;
+    }
+
+    .container{
+      padding: 4%;
+      margin: 0;
+    }
+  
+    #header{
+      background-image: linear-gradient(to top right,
+      rgb(0, 3, 0),
+      rgba(0, 136, 68, 0.15)), url('../images/small-screen-bg.png');
+      background-size: cover;
+      background-position: center;
+  } 
+
+  nav ul{
+    position: fixed;
+    background: green;
+    top:0;
+    right: -200px;
+    width: 200px;
+    height: 95vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+    font-size: 30px;
+    padding-top: 30px;
+  
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  
+  nav ul .fa{
+    position: absolute;
+    top: 25px;
+    left:25px;
+    cursor: pointer;
+  }
+  nav .fa{
+    display: block;
+    font-size: 30px;
+    color: white;
+  }
+  .header-text{
+    text-align: left;
+    margin-top: 90%;
+   
+   }
+   .text{
+  text-align: left;
+    font-size: 28px;
+    line-height: 100px;
+   
+  }
+  .header-text h2{
+    
+    font-size: 30px;
+  }
+  .header-text h2 span{
+    font-size: 35px;
+  }
+  .header-text h4{
+    padding-top: 25px;
+    font-size:22;
+  }
+  .header-text button{
+  margin-top: 50px;
+  }
+
+  /* About Section */
+
+#about{
+    background-color: azure;
+    height: auto;
+}
+
+#image-section{
+    flex-basis: 100%;
+}
+
+#image{
+    height: 40vh;
+    width: auto;
+    border-radius: 0;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+#details-section{
+    flex-basis: 100%;
+}
+
+.tab-links{
+    font-size: 16px;
+    padding-right: 15px;
+}
+
+.tab-contents {
+    display:none;
+} 
+
+.tab-contents.active-tab{
+   display: block;
+}
+
+#salutation{
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+#font-1{
+    padding-top: 10px;
+    font-size:15px;
+}
+
+#signature{
+    padding-top: 20px;
+}
+
+#content-heading{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+#font-2{
+    font-size: 15px;
+    
+}
+
+#wrapper{
+    margin-top:10px;
+    font-size: 15px;
+}
+
+#interest-list{
+    padding-top: 10px;
+    text-align: left;
+    font-size: 15px;
+    text-align:justify;
+}
+
+/* Expertise Section */
+
+#expertise{
+    height: auto;
+}
+
+#skills{
+    flex-basis: 100%;
+}
+
+#skills-heading{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#front-end{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#pie-rating{
+    border-radius: 50%;
+    height: 100px;
+}
+
+#back-end-1{
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#barchart{
+    flex-basis: 100%;
+}
+
+#myPlot{
+    height: 42vh;
+    margin: auto;
+    width:100%;
+}
+
+
+/* Experience Section */
+
+#experience{
+    height: auto;
+}
+
+#tab-link-2{
+    width: 100%;
+   padding-left: 5px;
+}
+
+#slide-container{
+    margin-top: 40px;
+    padding: 0;
+}
+.mySlides {
+    display: none;
+    height:30vh;
+    width: 100%;  
+}
+
+.mySlides img{
+    height: 30vh;
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+   
+}
+
+.prev,
+.next {
+  padding: 10px ;
+  margin-top: -160px;
+}
+
+.next {
+    right: 15px;
+    border-radius: 3px 0 0 3px;
+}
+   
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.column {
+    padding:0;
+    float: left;
+    width: 18%;
+}
+  
+.demo {
+    opacity: 0.85;
+    width:100% ;
+    height:70px;
+    padding-bottom: 40px;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+  
+  /* web development gallery */
+
+#gallery{
+    flex-basis: 100%;
+    height: auto;
+}
+
+#side-section{
+    flex-basis: 100%;
+    border-bottom:none;
+}
+  
+#image-container {
+    position:inherit;
+      display:flex;
+      width: 370px;
+      height: 75vh;
+      overflow-x: scroll;
+}
+
+.flip-card {
+    margin: 40px;
+    background-color: transparent;
+    width: 260px;
+    height: 50vh;
+    border-radius: 10px;
+    perspective: 1000px;  
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 260px;
+    height: 65vh;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style:preserve-3d;   
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 260px;
+    height: 65vh;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+#flip-back{
+    margin-top: 60%;
+    font-size: 12px;
+}
+
+#video-header{
+    background-color: rgb(27, 25, 172);
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white;
+    text-align: center;
+}
+
+#video{
+    margin-top: 20px;
+    width:100%;
+    height: 30vh;
+}
+   
+#flutter-icon{
+    height: 150px;
+   margin-left: 20%;
+   margin-right: 20%;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 8px solid rgb(116, 207, 230);
+    
+}
+
+
+
+
+
+
+
 
 
 /* Contact Information */
 
-
 #contact{
+    height: auto;
+    color: whitesmoke;
+}
 
-  background-color: rgba(1, 1, 7, 0.966);
-  height: 100vh;
-  color: aliceblue;
+#form-col{
+    flex-basis: 100%; 
+}
 
-}
-.con-col{
-  flex-basis: 48%;
-  
-}
-.inf-col{
-  flex-basis: 48%;
-  text-align: center;
-  
-}
 #contact h1{
-  font-size: 35px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: burlywood;
-  
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
-
+  
 form input{
-  height: 40px;
-  width: 500px;
-  border-radius: 10px;
-  padding-left: 20px;
+    height: 40px;
+    width: 310px;
+}
+  
+form textarea{
+    height: 80px;
+    width: 310px;
 }
 
-form textarea{
-  height: 80px;
-  width: 500px;
-  border-radius: 10px;
-  padding-left: 20px;
-}
-form button{
-  cursor: pointer;
-  width: 80px;
-  height: 35px;
-  background-color: blue;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  border-color: transparent;
-  border-radius: 5px;
-}
 table{
-  cursor: pointer;
-  padding-top: 35%;
-  color: aliceblue;
-  padding-left: 20%;
+    cursor: pointer;
+    padding-top: 20%;
+    color: aliceblue;
+    padding-left: 10%;
+}
   
-}
 table td{
-  height: 40px;
-  padding-left: 30px;
+    height: 40px;
+    padding-left: 30px;
 }
+
 #icon{
-  color: burlywood;
-  font-size: 30px;
-  text-align: center;
+    color: burlywood;
+    font-size: 30px;
+    text-align: center;
+}
 
 }

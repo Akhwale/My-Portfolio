@@ -1,34 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Porfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="scripts/style.css">
-   <!-- <script src="scripts/main.js"></script> -->
-
-   
- 
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
 </head>
-<body> 
-      <div id="header">
-        <div class="container">
+<body>
+
+    <!-- Landing Page -->
+    <div id="header">
+        <div class="container" id="header-container">
           <nav>
-            <img src="images/logo.png" style="height:30;width:125px">
-            <ul>  
+            <img src="images/logo.png" id="logo">
+            <ul id="sidemenu">  
               <li><a href="#header" class= "active-link">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#contact ">Contact</a></li>
+              <i class="fa fa-times" aria-hidden="true" onclick="closeMenu()"></i>
             </ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="openMenu()"></i>
           </nav>
         </div>
 
-
         <div class="header-text">
           <div class="container">
-            <div class="salutation">
+            <div class="text">
               In Need of 
               <div class="slider">   
                 <div>an Online-Store?</div>
@@ -47,252 +50,318 @@
 
       </div>
 
-
-<!-- About Section -->
-
+      <!-- About Section -->
       <div id="about">
-        <div class="container">
+        <div class="container" id="about-container">
           <nav>
-            <header>
-              <h1>Brief 'About'</h1>
+            <header id="title">
+              <h1>About</h1>
             </header>
-            <img src="images/logo.png" style="height:30;width:125px">
+            <img src="images/logo.png" id="logo">
           </nav>
-         
-         
           <div class="row">
-            <div class="first-col">
-              <div class="card profile">
+            <div class="col" id="image-section">
+              <div class="card" id="image">
               </div>   
             </div>
 
-            <div class="second-col">
+            <div class="col" id="details-section">
 
-              <!-- Tab-heading and links -->
-
-              <div class="tab-heading">
-                <p class="tab-links active-link" onclick="navigate('about')" >Profile</p>
-                <p class="tab-links" onclick="navigate('education')" >Education</p>
-                <p class="tab-links" onclick="navigate('experience')" >Experience</p>
-                <p class="tab-links" onclick="navigate('interests')" >Interests</p>
-              </div>
-              
-              <!-- Tab content -->
-              <div id="profile" class="tab-contents active-tab">
-                <h2>Hello,</h2>
-                <p>My name is Edwin Akhwale, a graduate from the Technical University of Kenya.
-                  I am a holder of a bachelor's degree in Information Science. During my final year of studies,
-                  I specialized in Informatics. My love for tech has been significant since my childhood.
-                  I like to get crafty and see things working. As a result of the same, I am a huge enthusiast 
-                  of coding. Through my journey of self discovery I have written codes in more than 10 programming languages.
-                  My best programming language is JavaScript.
-                  I also have great experience working with other programming languages on both small and huge projects.</p>
+                <!-- Tab-heading and links -->
+  
+                <div class="tab-heading">
+                  <p class="tab-links active-link" onclick="navigate('about')" >Profile</p>
+                  <p class="tab-links" onclick="navigate('education')" >Education</p>
+                  <p class="tab-links" onclick="navigate('experience')" >Prof'</p>
+                  <p class="tab-links" onclick="navigate('interests')" >Interests</p>
+                </div>
                 
-                  <p>My name is Edwin Akhwale, a graduate from the Technical University of Kenya.
-                    I am a holder of a bachelor's degree in Information Science. During my final year of studies,
+                <!-- Tab content -->
+                <div id="profile" class="tab-contents active-tab" style="display:block">
+                  <h2 id="salutation">Hello,</h2>
+                  <p id="font-1">I am Edwin Akhwale, from the Nairobi, Kenya.
+                    I am a holder of a bachelor's degree in Information Science. During my final years of studies,
                     I specialized in Informatics. My love for tech has been significant since my childhood.
                     I like to get crafty and see things working. As a result of the same, I am a huge enthusiast 
                     of coding. Through my journey of self discovery I have written codes in more than 10 programming languages.
                     My best programming language is JavaScript.
                     I also have great experience working with other programming languages on both small and huge projects.</p>
-                   
-                <h3>Edwin Akhwale</h3>
-              </div>
-              
-              <div id="education" class="tab-contents">
-               <ul>
-                <li><span>University</span> <br>Technical University of Kenya</li>
-                <li><span>HighSchool</span><br> St. Peters' Boys' High School Mumias</li>
-                <li><span>Primart</span> <br>Unity Primary School</li>
-               
-               </ul>
-              </div>
-              
-              <div id="experience" class="tab-contents">
-                <ul>
-                  <li><span>Web Development</span> <br>Technical University of Kenya</li>
-                  <li><span>Mobile App Development</span><br> St. Peters' Boys' High School Mumias</li>
-                  <li><span>Networking</span> <br>Unity Primary School</li>
-                 
-                 </ul>
-              </div>
-
-              <div id="interests" class="tab-contents">
-                <ul>
-                  <li><span>Rugby</span> <br>Technical University of Kenya</li>
-                  <li><span>Technology</span><br> St. Peters' Boys' High School Mumias</li>
-                  <li><span>Politics</span> <br>Unity Primary School</li>
-                 
-                 </ul>
+                  <p id="font-1">My career is drawn to the idea of being able to create something from nothing: from a blank screen to a fully 
+                    functioning application. This is a challenge that I find incredibly stimulating and rewarding. 
+                    I have been able to bring new ideas to life and be part of larger teams that work together 
+                    to create something that can potentially be used by millions of people. I am motivated to continue my 
+                    learning and improve my skills as a software developer. There is an immense amount of knowledge to be 
+                    gained, and I look forward to pushing myself to continuously expand my capabilities.</p>
+                  <p id="font-1">You too can join me in this venture to make the world a better place through
+                    coding.
+                  </p>
+                  <p id="signature">Thank you.</p>
+                  
                 </div>
-            </div>
-          </div>  
+                
+                <div id="education" class="tab-contents">
+                
+                  <h3 id="content-heading">University Education</h3>
+                  <p id="font-1">The Technical University of Kenya<br>Level of Education: Bachelor's Degree<br>Years of study:2018-2022</p>
+                  <p id="font-2">Achievment: <i class="fa fa-certificate" aria-hidden="true"></i> BSc. Information Science</p>
+                  
+                  <h3 id="content-heading">Secondary Education</h3>
+                  <p id="font-1">St Peter's Mumias Boys' High School<br>Level of Education: Secondary School Education<br>Years of study:2014-2017</p>
+                  <p id="font-2">Achievment: <i class="fa fa-certificate" aria-hidden="true"></i> Kenya Certificate of Secondary Education</p>
+  
+                  <h3 id="content-heading">Primary Education</h3>
+                  <p id="font-1">Unity Primary School<br>Level of Education: Basic Education<br>Years of study:2004-2013</p>
+                  <p id="font-2">Achievment: <i class="fa fa-certificate" aria-hidden="true"></i> Kenya Certificate of Primary Education</p>
+
+                 </div>
+  
+                 
+                <div id="experience" class="tab-contents">
+                  <h3  id="content-heading">Professional Summary</h3>
+                  <div id="wrapper">
+                  <p id="font-1">An Insightful Information Technology professional with experience in computer infrastructure and 
+                    network management, application development and support, information system security and policy 
+                    implementation. </p>
+                    <p id="font-1">
+                    An experienced IT Support specialist accustomed to handling IT support services such as the set 
+                    up and operation of IT help desks for rendering prompt, professional and friendly assistance to users 
+                    who report different IT incidences and providing first level IT Help-desk services to users. 
+                    </p>
+                    <p id="font-1">An Information scientist familiar and adept in the collection, classification, analysis, manipulation, 
+                    storage, retrieval, dissemination, and protection of data and information. 
+                    A professional dedicated to service delivery focused towards problem solving, process automation and 
+                    long-term user satisfaction.</p>
+                    <p id="font-1">See more in the CV below</p>
+                </div>
+                </div>
+  
+                  <div id="interests" class="tab-contents">
+                    <h3 id="content-heading">Interests in Tech</h3>
+                    <div id="wrapper">
+                      
+                      <ul id="interest-list">
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Progressive learning and staying up-to-date with the latest technologies</li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Designing, developing, and troubleshooting software solutions</li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Developing and improving software applications</li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Utilizing software development methodologies such as Agile </li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Working collaboratively with other developers, designers, and stakeholders</li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Writing well-structured, reusable code </li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Testing and debugging software solutions</li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Creating user-friendly and intuitive experiences </li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Collaborating with other team members to share best practices </li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Keeping up with the latest industry trends </li>
+                        <li><i class="fa fa-code" aria-hidden="true"></i> Developing technical documentation for end users and support staff</li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+              </div>
         </div>
-      </div>
-
-
-<!-- Portfolio Section -->
-
-      <div id="portfolio">
-        <div class="container"> 
-          <nav>
-            <header>
-              <h1 style="color: rgb(65, 66, 18);"> Portfolio </h1>
-            </header>
-            <img src="images/logo.png" style="height:30;width:125px">
-          </nav><br>
+        </div>
+        </div>
         
-        <h2 style="text-align: center;">Front-end Proficiency Levels</h2>
-        <div class="row">
-          <img id="rating" src="images/html.jpg">
-          <img id="rating" src="images/css.JPG" >
-          <img id="rating" src="images/bootsrap.JPG" >
-          <img id="rating" src="images/tailwind.JPG">
-        </div>
-        <br>
 
-        <h2 style="text-align: center;">Back-end end Proficiency Levels</h2>
-        <div class="row">
-          <img id="rating" src="images/python.JPG">
-          <img id="rating" src="images/java.JPG" >
-          <img id="rating" src="images/javascript.JPG" >
-          <img id="rating" src="images/php.JPG">
-          <img id="rating" src="images/dart.JPG">
+        <!-- Expertise -->
+
+        <div id="expertise">
+            <div class="container"> 
+              <nav>
+                <header id="title">
+                  <h1>Expertise</h1>
+                </header>
+                <img src="images/logo.png" id="logo">
+              </nav>
+
+              <div class="row">
+                <div class="col" id="skills">
+                    <h3 id="skills-heading">Front-end Proficiency Levels</h3>
+                    <div class="row" id="front-end">
+                        <img id="pie-rating" src="images/html.jpg">
+                        <img id="pie-rating" src="images/css.JPG">
+                        <img id="pie-rating" src="images/bootsrap.JPG">
+                        <img id="pie-rating" src="images/tailwind.JPG">
+                    </div>
+                    <h3 id="skills-heading">Back-end end Proficiency Levels</h3>
+                    <div class="row" id="back-end-1">
+                        <img id="pie-rating" src="images/javascript.JPG">
+                        <img id="pie-rating" src="images/java.JPG" >
+                    </div>
+                    <div class="row">
+                        <img id="pie-rating" src="images/python.JPG">
+                        <img id="pie-rating" src="images/dart.JPG">
+                        <img id="pie-rating" src="images/php.JPG" >
+                    </div>
+            </div>
+
+            <div class="col" id="barchart">  
+                <h3 id="skills-heading">Proficiency Barchart </h3>
+                <div id="myPlot" style="width:100%;max-width:700px"></div>
+            </div>
         </div>
         </div>
-      </div>
-          
-<!-- Experience Section     -->
+        </div>
 
+        <!-- Experience Section     -->
 
-      <div id="expereince">
+      <div id="experience">
         <div class="container">
           <nav>
-            <header>
-              <h1 style="color: rgb(65, 66, 18);"> Experience </h1>
+            <header id="title">
+              <h1 >Experience</h1>
             </header>
-            <img src="images/logo.png" style="height:30;width:125px">
-          </nav><br>
-
-
-          <div class="projects">
-
+            <img src="images/logo.png" id="logo">
+          </nav>
             <!-- Tab-heading and links -->
-    
             <div class="tab-heading">
-              <p class="tab-links active-link" onclick="navigate('web-development')" >Web Development</p>
-              <p class="tab-links" onclick="navigate('mobile-development')" >Mobile Development</p>
-              <p class="tab-links" onclick="navigate('other-interests')" >Other interests</p>
-             
+              <p id="tab-link-2" class="tab-links active-link" onclick="navigate('web-development')" >Web Development</p>
+              <p id="tab-link-2" class="tab-links" onclick="navigate('mobile-development')" >Mobile Development</p>
             </div>
-            
+
             <!-- Tab content -->
-            <div id="web-development" class="tab-contents active-tab">
-              <img id="rating" src="images/html.jpg">
-            </div>
-            
-            <div id="education" class="tab-contents">
-             <ul>
-              <li><span>University</span> <br>Technical University of Kenya</li>
-              <li><span>HighSchool</span><br> St. Peters' Boys' High School Mumias</li>
-              <li><span>Primart</span> <br>Unity Primary School</li>
-             
-             </ul>
-            </div>
-            
-            <div id="experience" class="tab-contents">
-              <ul>
-                <li><span>Web Development</span> <br>Technical University of Kenya</li>
-                <li><span>Mobile App Development</span><br> St. Peters' Boys' High School Mumias</li>
-                <li><span>Networking</span> <br>Unity Primary School</li>
-               
-               </ul>
-            </div>
+            <div class="tab-contents active-tab" id="web-development">
+                <div class="container" id="slide-container">        
+                  <div class=" mySlides" style="display:block">
+                     <img  src="images/project1.JPG" alt="slide1" >
+                  </div>
     
-            <div id="interests" class="tab-contents">
-              <ul>
-                <li><span>Rugby</span> <br>Technical University of Kenya</li>
-                <li><span>Technology</span><br> St. Peters' Boys' High School Mumias</li>
-                <li><span>Politics</span> <br>Unity Primary School</li>
-               
-               </ul>
-              </div>
-          </div>
+                  <div class="mySlides">
+                      <img src="images/odin_signup.JPG"  alt="slide2">
+                  </div>
     
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="row">
-            <div class="card">
-              <img src = "images/background.png" style="height:200px; width :100%">
-              <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
+                  <div class="mySlides">
+                      <img src="images/project2.JPG"  alt="slide3">
+                  </div>
+    
+                  <div class="mySlides">
+                      <img src="images/project4.JPG"  alt="slide4">
+                  </div>
+    
+                  <div class="mySlides">
+                      <img src="images/project3.JPG" alt="slide5">
+                  </div>
+                
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+                <!-- Image text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+    
+                <!-- Thumbnail images -->
+                <div class="row" id="thumbnail">
+                  <div class="column ">
+                    <img class="demo cursor "  src="images/project1.JPG"   onclick="currentSlide(1)" alt="The portfolio">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/odin_signup.JPG"  onclick="currentSlide(2)" alt="Simple SignUp page">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/project2.JPG"  onclick="currentSlide(3)" alt="Sciesec Int">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/project4.JPG"  onclick="currentSlide(4)" alt="Cinque Terre">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/project3.JPG"  onclick="currentSlide(5)" alt="Mountains and fjords">
+                  </div>          
+                </div>
               </div>
             </div>
 
-            <div class="card">
-              <img src = "images/background.png" style="height:300px; width :100%">
-              <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
+            <!-- Mobile Development -->
+            <div id="mobile-development" class="tab-contents">
+              <div class="row">
+                <div class="col" id="gallery">
+                  <div id ="image-container">
+                    
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front" id="mpesa">
+                    </div>
+                    <div class="flip-card-back">
+                      <p id="flip-back">Feel free to follow through this project by viewing the code in Github through the link below. You can also make your contribution and leave a brief explanation</p>
+                      <button id="default-btn">Github -link</button>
+                    </div>
+                  </div>
+                </div>
+    
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                      <div class="flip-card-front" id="mpesa2">
+                      </div>
+                      <div class="flip-card-back">
+                        <p id="flip-back">Feel free to follow through this project by viewing the code in Github through the link below. You can also make your contribution and leave a brief explanation</p>
+                          <button id="default-btn">Github -link</button>
+                        </div>
+                </div>
               </div>
-            </div>
-
-            <div class="card">
-              <img src = "images/background.png" style="height:200px; width :100%">
-              <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
+    
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                      <div class="flip-card-front" id="gplug">
+                      </div>
+                      <div class="flip-card-back">
+                        <p id="flip-back">Feel free to follow through this project by viewing the code in Github through the link below. You can also make your contribution and leave a brief explanation</p>
+                          <button id="default-btn">Github -link</button>
+                        </div>
+                </div>
               </div>
-            </div>
-   
-          </div>
+    
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                      <div class="flip-card-front" id="gplug2">
+                      </div>
+                      <div class="flip-card-back">
+                        <p id="flip-back">Feel free to follow through this project by viewing the code in Github through the link below. You can also make your contribution and leave a brief explanation</p>
+                          <button id="default-btn">Github -link</button>
+                        </div>
+                </div>
+              </div>
+    
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                      <div class="flip-card-front" id="gplug3">
+                      </div>
+                      <div class="flip-card-back">
+                        <p id="flip-back">Feel free to follow through this project by viewing the code in Github through the link below. You can also make your contribution and leave a brief explanation</p>
+                          <button id="default-btn">Github -link</button>
+                        </div>
+                </div>
+              </div>
+              </div>
+                </div>
+              
+    
+                  <div class="col" id="side-section">
+                    <div class="content">
+                    <h3 id="video-header">What is Flutter/ Dart?</h3>
+    
+                    <iframe  id="video"
+                      src="https://www.youtube.com/embed/NrO0CJCbYLA?autoplay=1&mute=1" allowfullscreen>
+                    </iframe>
+    
+                    <img src="images/flutter-icon.png" id="flutter-icon">
+                  </div>
+    
+                  </div>
+                </div>
+                </div>
+                </div>
+                </div>
+              
 
-        </div>
-        </div>
-        
 
-      
 
-<!-- Contact Information Section -->
+                <!-- Contact Information -->
 
-        <div id="Contact">
+        <div id="contact">
           <div class="container">
             <div class="row">
-            <div class="con-col">
-              <h1>Contact Me here</h1>
-            <form method="post">
+              <div class="col" id="form-col">
+              <h1>Contact Me</h1>
+              <form method="post">
               <label for="frstMame">First Name:</label><br><br>
               <input type="text" id="firstName" name="firstName"><br><br>
               <label for="lastMame">Last Name:</label><br><br>
@@ -304,7 +373,7 @@
               <button type="submit">Submit</button>
             </form>
             </div>
-            <div class="inf-col">
+            <div class="col" id="social-links">
               <table>
                 <tr>
                   <td id="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
@@ -336,44 +405,43 @@
           </div>
         </div>
           
-  
 
+<script>
+    
+var sidemenu = document.getElementById("sidemenu");
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-            </div>
-            <div class="flip-card-back">
-            </div>
-          </div>
-        </div>
-
-
-
-        <script>
-          var tablinks = document.getElementsByClassName('tab-links');
-          var tabcontents = document.getElementsByClassName('tab-contents');
-
-
-
-function navigate(tabname){
-  for(tablink of tablinks){
-    tablink.classList.remove("active-link");
-  }
-  for(tabcontent of tabcontents){
-    tabcontent.classList.remove("active-tab");
-
-  }
-
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
-
+function openMenu(){
+  sidemenu.style.right="0";
 }
-        </script>
+function closeMenu(){
+  sidemenu.style.right="-200px";
+}
 
-  
+
+// Plot of a barchart
+         
+var xArray = ["HTML", "CSS", "Bootstrap", "TailWind", "JavaScript","Java", "Python", "Dart", "PHP"];
+        var yArray = [95, 95, 90, 90, 95,90,90,85,95];
+        
+        var data = [{
+          x:xArray,
+          y:yArray,
+          type:"bar",
+          marker: {color: ["rgb(80, 161, 73);", "blue","rgba(43, 206, 228, 0.801)", "rgba(85, 35, 165, 0.925)", "rgba(255, 218, 11, 0.925)", " rgba(179, 35, 35, 0.925)", "rgba(49, 143, 46, 0.671)","rgb(189, 93, 14)","rgb(114, 124, 114)",]},
+        }];
+       
+        
+        var layout = {title:"Profeciency Levels",};
+        
+        Plotly.newPlot("myPlot", data, layout);
+       
+
+
+
+
+</script>
+
+
+
 </body>
 </html>
-
-
-
