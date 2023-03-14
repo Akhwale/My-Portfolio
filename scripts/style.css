@@ -743,6 +743,7 @@ table td{
       rgba(0, 136, 68, 0.15)), url('../images/small-screen-bg.png');
       background-size: cover;
       background-position: center;
+      height: 110vh;
   } 
 
   nav ul{
@@ -779,19 +780,19 @@ table td{
     color: white;
   }
   .header-text{
-    text-align: left;
+    text-align: center;
     margin-top: 90%;
    
    }
    .text{
-  text-align: left;
-    font-size: 28px;
+    text-align: left;
+    font-size: 24px;
     line-height: 100px;
    
   }
   .header-text h2{
     
-    font-size: 30px;
+    font-size: 28px;
   }
   .header-text h2 span{
     font-size: 35px;
@@ -830,8 +831,8 @@ table td{
 }
 
 .tab-links{
-    font-size: 16px;
-    padding-right: 15px;
+    font-size: 20px;
+    padding-right: 10px;
 }
 
 .tab-contents {
@@ -840,6 +841,7 @@ table td{
 
 .tab-contents.active-tab{
    display: block;
+    padding-right: 15px;
 }
 
 #salutation{
@@ -899,7 +901,7 @@ table td{
 }
 #pie-rating{
     border-radius: 50%;
-    height: 100px;
+    height: 95px;
 }
 
 #back-end-1{
@@ -927,7 +929,8 @@ table td{
 
 #tab-link-2{
     width: 100%;
-   padding-left: 5px;
+   
+   font-size: 16px;
 }
 
 #slide-container{
@@ -1005,10 +1008,10 @@ table td{
 }
 
 .flip-card {
-    margin: 40px;
+    margin: 20px;
     background-color: transparent;
     width: 260px;
-    height: 50vh;
+    height: 65vh;
     border-radius: 10px;
     perspective: 1000px;  
 }
@@ -1028,16 +1031,42 @@ table td{
 
 .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 260px;
+    width: 230px;
     height: 65vh;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 3, 0, 0.205),
+    rgba(0, 136, 68, 0.15)),url('../images/picture.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: dodgerblue;
+    color: white;   
+    border-radius: 10px;
+}  
+ 
+.flip-card-front:hover {
+    transform-style: preserve-3d;
+    background-image: url('../images/picture.jpg');
+}
+  
+.flip-card-back {
+    background:rgb(65, 66, 18);
+    opacity: 0.9;
+    transform: rotateY(180deg);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #flip-back{
     margin-top: 60%;
     font-size: 12px;
 }
+
 
 #video-header{
     background-color: rgb(27, 25, 172);
