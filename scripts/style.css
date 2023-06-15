@@ -443,7 +443,7 @@ nav{
   
 #image-container {
       display:flex;
-      width: 850px;
+      width: 790px;
       height: 80vh;
       overflow-x: scroll;
 }
